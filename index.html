@@ -132,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project Two Row-->
+            
                 <div class="row gx-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="rain6.jpg" alt="..." /></div>
                     <div class="col-lg-6 order-lg-first">
@@ -152,9 +152,7 @@
             <br><br><br>
         
             <div class="container px-4 px-lg-5">
-                <!-- Featured Project Row-->
-                
-                <!-- Project One Row-->
+          
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="lol.jpg" alt="..." /></div>
                     <div class="col-lg-6">
@@ -168,7 +166,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project Two Row-->
+               
                 <div class="row gx-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="foszniht.jpg" alt="..." /></div>
                     <div class="col-lg-6 order-lg-first">
@@ -187,8 +185,7 @@
             <br><br><br>
         
             <div class="container px-4 px-lg-5">
-                <!-- Featured Project Row-->
-                <!-- Project One Row-->
+               
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="TF2better.jpg" alt="..." /></div>
                     <div class="col-lg-6">
@@ -202,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project Two Row-->
+                
                 <div class="row gx-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="wt.jpg" alt="..." /></div>
                     <div class="col-lg-6 order-lg-first">
@@ -227,61 +224,33 @@
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
                         <h2 class="text-white mb-5">Jelentkezési ürlap</h2>
                     
-                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                           
-                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                
-                             
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                    <label for="name">Csapat név</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required"></div>
-                                </div>
-                             
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                    <label for="email">E-mail </label>
-                                    <div class="invalid-feedback" data-sb-feedback="email:required">E-mail szükséges.</div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">E-mail nem található.</div>
-                                </div>
-                                
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                    <label for="phone">Telefonszám</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Telefonszám sükszéges.</div>
-                                </div>
-                        
-                                <div class="form-floating mb-3">
-                                    <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                    <label for="message">Csapat tagjai neve , születési éve, osztálya </label>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required"></div>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                    <label for="message">Csapattagok email címe </label>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required"></div>
-                                </div>
-                                
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Sikeres jelentkezés!</div>
-                                        Ha szeretnél többet tudni az iskolánkról akkor katt ide!
-                                        <br />
-                                        <a href="https://www.pollak.hu/">Pollák.hu</a>
-                                    </div>
-                                </div>
-                              
-                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Sikertelen elküldés.</div></div>
-                                
-                                <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Jelentkezés</button></div>
-                            </form>
-                        
-                            <div class="d-none" id="submitSuccessMessage">
+                        <form id="contactForm" action="regiszter.php" method="post">
+    <div class="form-floating mb-3">
+        <input class="form-control" id="name" type="text" name="name" required />
+        <label for="name">Csapat név</label>
+    </div>
+    
+    <div class="form-floating mb-3">
+        <input class="form-control" id="email" type="email" name="email" required />
+        <label for="email">E-mail</label>
+    </div>
 
-                            </div>
-                            
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Sikertelen elküldés.</div></div>
-                        </form>
+    <div class="form-floating mb-3">
+        <input class="form-control" id="phone" type="tel" name="phone" required />
+        <label for="phone">Telefonszám</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <textarea class="form-control" id="message" name="message" style="height: 10rem" required></textarea>
+        <label for="message">Csapat tagjai</label>
+    </div>
+
+    <div class="d-grid">
+        
+        <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Jelentkezés</button>
+    </div>
+    
+</form>
                     </div>
                 </div>
             </div>
